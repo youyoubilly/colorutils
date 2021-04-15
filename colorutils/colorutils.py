@@ -86,7 +86,7 @@ class Color(object):
         if self.arithmetic is ArithmeticModel.LIGHT:
             return Color((min(r1 + r2, rgb_max_val), min(g1 + g2, rgb_max_val), min(b1 + b2, rgb_max_val)))
         else:
-            return Color(((r1 + r2 // 2), (g1 + g2 // 2), (b1 + b2 // 2)))
+            return Color(((r1 + r2)//2, (g1 + g2)//2, (b1 + b2)//2))
 
     def __sub__(self, other):
         """ Subtraction """
